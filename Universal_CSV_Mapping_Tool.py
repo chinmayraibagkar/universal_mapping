@@ -22,7 +22,7 @@ if file1 is not None:
     except UnicodeDecodeError:
         try:
             # If default encoding fails, try 'ISO-8859-1'
-            st.session_state.df1 = pd.read_csv(file1, encoding='ISO-8859-1')
+            st.session_state.df1 = pd.read_csv(file1, encoding='utf-8')
         except Exception as e:
             # If both attempts fail, show an error message
             st.error(f"Error reading {file1.name}: {e}")
@@ -34,7 +34,7 @@ if file2 is not None:
     except UnicodeDecodeError:
         try:
             # If default encoding fails, try 'ISO-8859-1'
-            st.session_state.df2 = pd.read_csv(file2, encoding='ISO-8859-1')
+            st.session_state.df2 = pd.read_csv(file2, encoding='utf-8')
         except Exception as e:
             # If both attempts fail, show an error message
             st.error(f"Error reading {file2.name}: {e}")
