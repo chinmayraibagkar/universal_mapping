@@ -1,5 +1,4 @@
 [server]
 
-port = 8501
 maxUploadSize = 2000
 maxMessageSize = 2000
